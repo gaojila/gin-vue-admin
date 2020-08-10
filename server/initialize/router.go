@@ -5,6 +5,7 @@ import (
 	"gin-vue-admin/global"
 	"gin-vue-admin/middleware"
 	"gin-vue-admin/router"
+
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
@@ -38,6 +39,7 @@ func Routers() *gin.Engine {
 	router.InitSysDictionaryDetailRouter(ApiGroup)   // 字典详情管理
 	router.InitSysDictionaryRouter(ApiGroup)         // 字典管理
 	router.InitSysOperationRecordRouter(ApiGroup)    // 操作记录
+	router.InitStudentRouter(ApiGroup)               //注册学生路由
 	global.GVA_LOG.Info("router register success")
 	return Router
 }
